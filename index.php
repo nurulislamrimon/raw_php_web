@@ -3,6 +3,7 @@
 
     $uri = $_SERVER["REQUEST_URI"];
 
+
     if ($uri === "/") {
         include_once "./pages/home.php";
     } else if ($uri === "/services") {
