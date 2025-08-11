@@ -25,7 +25,7 @@
 <body>
     <?php
     $name = "Dark Matter";
-    $read = false;
+    $read = true;
 
     if ($read) {
         $message = "You have read $name";
@@ -33,7 +33,7 @@
         $message = "You have not read $name";
     } ?>
 
-    <h1><?php echo $message ?></h1>
+    <h1><?= $message ?></h1>
 </body>
 
 </html>
