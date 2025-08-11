@@ -13,4 +13,4 @@
 
     <?php
 
-    require_once "./partials/nav.view.php";
+    require_once "./views/partials/nav.view.php";
