@@ -42,6 +42,17 @@
             <p>by <?php echo $author; ?></p>
         </div>
     <?php endforeach; ?>
+
+    <?php
+    $gratitude = [
+        "Thanks ",
+        "Mr."
+    ]
+    ?>
+
+    <?php foreach ($gratitude as $w): ?>
+        <span><?php echo $w; ?></span>
+    <?php endforeach ?>
 </body>
 
 </html>
