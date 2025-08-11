@@ -8,4 +8,16 @@
         "The Great" => "F. Scott Fitzgerald",
     ];
 
+
+    $gratitude = [
+        "Thanks ",
+        "Mr."
+    ];
+
+    function simpleFn()
+    {
+        return "<h2>Gratitude</h2>";
+    }
+
+
     include_once "./index.view.php";

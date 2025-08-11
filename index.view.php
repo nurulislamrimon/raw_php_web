@@ -35,19 +35,6 @@
         </div>
     <?php endforeach; ?>
 
-    <?php
-    $gratitude = [
-        "Thanks ",
-        "Mr."
-    ];
-
-    function simpleFn()
-    {
-        return "<h2>Gratitude</h2>";
-    }
-
-    ?>
-
     <p>
         <?php foreach ($gratitude as $w): ?>
             <span><?= $w; ?></span>
