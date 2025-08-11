@@ -31,6 +31,7 @@
         "1984" => "George Orwell",
         "Pride and Prejudice" => "Jane Austen",
         "The Great Gatsby" => "F. Scott Fitzgerald",
+        "The Great" => "F. Scott Fitzgerald",
     ]
     ?>
 
@@ -38,7 +39,7 @@
         $books as $title => $author
     ): ?>
         <div>
-            <h2><?php echo $title . "<sup>tm</sup>"; ?></h2>
+            <h2><?php echo $title . "<sup><small>tm</small></sup>"; ?></h2>
             <p>by <?php echo $author; ?></p>
         </div>
     <?php endforeach; ?>
@@ -47,12 +48,22 @@
     $gratitude = [
         "Thanks ",
         "Mr."
-    ]
+    ];
+
+    function simpleFn()
+    {
+        return "<h2>Gratitude</h2>";
+    }
+
     ?>
 
-    <?php foreach ($gratitude as $w): ?>
-        <span><?php echo $w; ?></span>
-    <?php endforeach ?>
+    <p>
+        <?php foreach ($gratitude as $w): ?>
+            <span><?= $w; ?></span>
+        <?php endforeach ?>
+    </p>
+
+    <p><?= simpleFn() ?></p>
 </body>
 
 </html>
