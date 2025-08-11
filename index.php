@@ -24,12 +24,16 @@
 
 <body>
     <?php
-    $name = "Nurul Islam Rimon";
-    echo "Hello " . $name . "<br/>";
-    echo "Welcome to PHP programming!<br/>";
-    echo "Thanks For being with us $name"
+    $name = "Dark Matter";
+    $read = false;
 
-    ?>
+    if ($read) {
+        $message = "You have read $name";
+    } else {
+        $message = "You have not read $name";
+    } ?>
+
+    <h1><?php echo $message ?></h1>
 </body>
 
 </html>
