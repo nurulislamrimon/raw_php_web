@@ -10,7 +10,10 @@
 <body>
     <?php
     $name = "Nurul Islam Rimon";
-    echo "Hello " . $name
+    echo "Hello " . $name . "<br/>";
+    echo "Welcome to PHP programming!<br/>";
+    echo "Thanks For being with us $name"
+
     ?>
 </body>
 
