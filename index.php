@@ -23,17 +23,25 @@
 </head>
 
 <body>
+    <h1>Recommended Books</h1>
+
     <?php
-    $name = "Dark Matter";
-    $read = true;
+    $books = [
+        "To Kill a Mockingbird" => "Harper Lee",
+        "1984" => "George Orwell",
+        "Pride and Prejudice" => "Jane Austen",
+        "The Great Gatsby" => "F. Scott Fitzgerald",
+    ]
+    ?>
 
-    if ($read) {
-        $message = "You have read $name";
-    } else {
-        $message = "You have not read $name";
-    } ?>
-
-    <h1><?= $message ?></h1>
+    <?php foreach (
+        $books as $title => $author
+    ): ?>
+        <div>
+            <h2><?php echo $title . "<sup>tm</sup>"; ?></h2>
+            <p>by <?php echo $author; ?></p>
+        </div>
+    <?php endforeach; ?>
 </body>
 
 </html>
