@@ -4,14 +4,17 @@
     $uri = $_SERVER["REQUEST_URI"];
 
 
-    if ($uri === "/") {
-        include_once "./pages/home.php";
-    } else if ($uri === "/services") {
-        include_once "./pages/services.php";
-    } else if ($uri === "/pricing") {
-        include_once "./pages/pricing.php";
-    } else if ($uri === "/contact") {
-        include_once "./pages/contact.php";
+    $routes = [
+        "/" => "./pages/home.php",
+        "/contact" => "./pages/contact.php",
+        "/pricing" => "./pages/pricing.php",
+        "/services" => "./pages/services.php",
+    ];
+
+
+    if (array_key_exists($uri, $routes)) {
+        require_once($routes[$uri]);
     } else {
-        include_once "./pages/notfound.php";
+        http_response_code(404);
+        require_once("./pages/notfound.php");
     }
