@@ -6,10 +6,10 @@
 
     $config =  require_once('./config/database.config.php');
 
+    $email = $_GET['email'];
 
     $db = new Database($config['database'], $config['db_username'], $config['db_password']);
     $query = "select * from user where email = ?";
-    $email = 'ni@gmail.com';
     $data = $db->query($query, [$email])->fetch();
 
     logger($data);
