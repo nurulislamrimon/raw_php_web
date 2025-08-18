@@ -14,4 +14,4 @@
 
     $data = $db->query($query, [':email' => $email])->fetchAll();
 
-    logger($data);
+    dd($data);
